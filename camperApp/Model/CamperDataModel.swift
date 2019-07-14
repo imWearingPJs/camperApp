@@ -24,10 +24,6 @@ class CamperDataModel: NSObject, Codable, MKAnnotation {
     var title: String?
     var subtitle: String?
     
-    // Note, the coordinate var is not a part of the decoded JSON file.
-    // It is derived from the lat and lon attributes, which are in the
-    // JSON file.
-    
     enum CodingKeys: String, CodingKey {
         case id
         case latitude

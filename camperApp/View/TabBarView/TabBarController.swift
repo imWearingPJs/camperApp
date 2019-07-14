@@ -11,7 +11,6 @@ import Anchorage
 
 class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
-//    let status = UserDefaults.standard.bool(forKey: "status")
     let status = true
     
     override func viewDidLoad() {

@@ -53,7 +53,6 @@ class APIManager {
         let session = URLSession(configuration:URLSessionConfiguration.default, delegate: nil, delegateQueue: nil)
         
         let dataTask = session.dataTask(with: request) { (data, response, error) -> Void in
-//            sleep(4) //simulates a 4 second API call
             if let error = error {
                 print(error)
             }
@@ -86,7 +85,6 @@ class APIManager {
         let session = URLSession(configuration:URLSessionConfiguration.default, delegate: nil, delegateQueue: nil)
         
         let dataTask = session.dataTask(with: request) { (data, response, error) in
-//            sleep(4) //simulates a 4 second API call
             if let error = error {
                 print(error)
             }
