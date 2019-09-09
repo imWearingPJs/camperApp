@@ -13,7 +13,6 @@
 		E18559A522D422E2000EDA85 /* CamperDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18559A422D422E2000EDA85 /* CamperDataModel.swift */; };
 		E18559B222D422F9000EDA85 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18559A822D422F9000EDA85 /* TabBarController.swift */; };
 		E18559B322D422F9000EDA85 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18559AA22D422F9000EDA85 /* UserProfileVC.swift */; };
-		E18559B422D422F9000EDA85 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18559AB22D422F9000EDA85 /* UserProfile.swift */; };
 		E18559B522D422F9000EDA85 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18559AC22D422F9000EDA85 /* LoginViewController.swift */; };
 		E18559B622D422F9000EDA85 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18559AD22D422F9000EDA85 /* RegistrationViewController.swift */; };
 		E18559B722D422F9000EDA85 /* Annotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18559AF22D422F9000EDA85 /* Annotations.swift */; };
@@ -37,7 +36,6 @@
 		E18559A422D422E2000EDA85 /* CamperDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamperDataModel.swift; sourceTree = "<group>"; };
 		E18559A822D422F9000EDA85 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E18559AA22D422F9000EDA85 /* UserProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
-		E18559AB22D422F9000EDA85 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		E18559AC22D422F9000EDA85 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E18559AD22D422F9000EDA85 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		E18559AF22D422F9000EDA85 /* Annotations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotations.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				E18559AA22D422F9000EDA85 /* UserProfileVC.swift */,
-				E18559AB22D422F9000EDA85 /* UserProfile.swift */,
 				E18559AC22D422F9000EDA85 /* LoginViewController.swift */,
 				E18559AD22D422F9000EDA85 /* RegistrationViewController.swift */,
 			);
@@ -318,7 +315,6 @@
 				E18559BD22D42304000EDA85 /* APIManager.swift in Sources */,
 				E185598D22D421BF000EDA85 /* AppDelegate.swift in Sources */,
 				E18559B822D422F9000EDA85 /* MapViewController.swift in Sources */,
-				E18559B422D422F9000EDA85 /* UserProfile.swift in Sources */,
 				E18559B622D422F9000EDA85 /* RegistrationViewController.swift in Sources */,
 				E18559A522D422E2000EDA85 /* CamperDataModel.swift in Sources */,
 				E18559B322D422F9000EDA85 /* UserProfileVC.swift in Sources */,
