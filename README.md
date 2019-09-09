@@ -15,5 +15,6 @@ This is a sample project that I've created to learn more about MapKit, Google Fi
 
 # Server side notes
 
-This project saves all new locatiosn and edits to a Node.js service hosted on Heroku.
+This project saves all new locations and edits to a Node.js service hosted on Heroku.
 This project has very basic capabilities for login/registration using Google Firebase.
+
