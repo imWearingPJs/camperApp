@@ -22,12 +22,15 @@ This project has very basic capabilities for login/registration using Google Fir
 # GIFs
 
 Editing an existing Campsites name:
+
 ![](Editing_a_camper.gif)
 
 
 Adding a new campsite:
+
 ![](Adding_a_camper.gif)
 
 
 New account creation:
+
 ![](NewAccount.gif)
