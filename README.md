@@ -11,6 +11,7 @@ This is a sample project that I've created to learn more about MapKit, Google Fi
 - Uses UIAlertController to add a name to the location before the location is added.
 - After tapping on an location and clicking on the info icon, a user can edit the name of the location.
 - All adds/edits are saved to a test server
+- The API response and my custom data model conform to the Codable protocols
 
 
 # Server side notes
