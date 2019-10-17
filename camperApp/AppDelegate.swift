@@ -24,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setupFirebase() {
-        FirebaseConfiguration.shared.setLoggerLevel(.min)
-        FirebaseApp.configure()
+//        FirebaseConfiguration.shared.setLoggerLevel(.min)
+//        FirebaseApp.configure()
         //TODO: Initialise and Configure your Firebase here:A
         //let myDatabase = Database.database().reference()
     }

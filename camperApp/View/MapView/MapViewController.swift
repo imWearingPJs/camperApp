@@ -21,7 +21,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var mapView = MKMapView(frame: UIScreen.main.bounds)
     var campers = [CamperDataModel]()
     let defaults = UserDefaults.standard
-    let editVC = EditVC()
     
     override func viewWillAppear(_ animated: Bool) { //hides the tab bar for this map view
         super.viewWillAppear(animated)
@@ -71,7 +70,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func setDelegates() {
         mapView.delegate = self
         locationManager.delegate = self
-        editVC.delegate = self //this is where the issue occurs
+//        editVC.delegate = self //this is where the issue occurs
     }
     
     func trackUser() {
@@ -106,7 +105,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
         if let data = view.annotation as? CamperDataModel {
+            let editVC = EditVC()
             editVC.camper = data
+            editVC.delegate = self
             self.navigationController?.present(editVC, animated: true)
         }
     }
