@@ -14,7 +14,8 @@ import SVProgressHUD
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, MapRefreshDelegate {
     
     func refreshData() {
-        // nothing for now
+        mapView.selectedAnnotations.forEach({ mapView.deselectAnnotation($0, animated: false) })
+        self.loadData()
     }
     
     var locationManager = CLLocationManager()

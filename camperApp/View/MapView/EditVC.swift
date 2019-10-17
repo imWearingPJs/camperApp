@@ -97,6 +97,7 @@ class EditVC: UIViewController {
     @objc func saveButtonTapped(sender: UIButton) {
         SVProgressHUD.show()
         APIManager().updateData(id: camper?.id, name: nameField.text) { (Bool) in
+            self.camper?.name = self.nameField.text
             self.dismiss(animated: true) {
                 self.delegate?.refreshData()
             }
