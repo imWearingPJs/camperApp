@@ -11,12 +11,17 @@ import MapKit
 import Anchorage
 import SVProgressHUD
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, MapRefreshDelegate {
+    
+    func refreshData() {
+        // nothing for now
+    }
     
     var locationManager = CLLocationManager()
     var mapView = MKMapView(frame: UIScreen.main.bounds)
     var campers = [CamperDataModel]()
     let defaults = UserDefaults.standard
+    let editVC = EditVC()
     
     override func viewWillAppear(_ animated: Bool) { //hides the tab bar for this map view
         super.viewWillAppear(animated)
@@ -66,6 +71,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func setDelegates() {
         mapView.delegate = self
         locationManager.delegate = self
+        editVC.delegate = self //this is where the issue occurs
     }
     
     func trackUser() {
@@ -100,9 +106,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
         if let data = view.annotation as? CamperDataModel {
-            let editVC = EditVC()
             editVC.camper = data
-            self.navigationController?.pushViewController(editVC, animated: true)
+            self.navigationController?.present(editVC, animated: true)
         }
     }
     

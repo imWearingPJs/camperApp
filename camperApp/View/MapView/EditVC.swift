@@ -10,9 +10,14 @@ import UIKit
 import Anchorage
 import SVProgressHUD
 
+protocol MapRefreshDelegate: class {
+    func refreshData()
+}
+
 class EditVC: UIViewController {
     
     var camper: CamperDataModel?
+    weak var delegate: MapRefreshDelegate?
     
     let nameField = UITextField()
     let idField = UITextView()
@@ -92,7 +97,9 @@ class EditVC: UIViewController {
     @objc func saveButtonTapped(sender: UIButton) {
         SVProgressHUD.show()
         APIManager().updateData(id: camper?.id, name: nameField.text) { (Bool) in
-            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true) {
+                self.delegate?.refreshData()
+            }
             SVProgressHUD.dismiss()
         }
     }
