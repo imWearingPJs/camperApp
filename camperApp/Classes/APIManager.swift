@@ -53,11 +53,11 @@ class APIManager {
         let session = URLSession(configuration:URLSessionConfiguration.default, delegate: nil, delegateQueue: nil)
         
         let dataTask = session.dataTask(with: request) { (data, response, error) -> Void in
-            if let error = error {
-                print(error)
-            }
-            else {
-                print("insert call success")
+            guard let data = data, error == nil else { return }
+            print("insert call success")
+            let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            if let responseJSON = responseJSON as? [String: Any] {
+                print(responseJSON)
             }
             DispatchQueue.main.async {
                 onCompletion(true)
