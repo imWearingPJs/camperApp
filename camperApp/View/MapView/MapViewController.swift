@@ -134,6 +134,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             let coordinate = self.mapView.convert(location,toCoordinateFrom: self.mapView)
             let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
+            annotation.title = name
             self.mapView.addAnnotation(annotation)
             APIManager().addData(name: name, lat: coordinate.latitude, long: coordinate.longitude, onCompletion: { (Bool) in
                 self.loadData()
