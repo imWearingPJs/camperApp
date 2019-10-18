@@ -11,7 +11,7 @@ import Anchorage
 
 class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
-    let status = true
+    let isLoggedIn = UserStatus().isLoggedIn
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,10 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        updateTabs()
+    }
+    
+    public func updateTabs() {
         // Create Tab one
         let mapTab = MapViewController()
         mapTab.title = "Let's find a Camper"
@@ -31,13 +35,15 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         mapTab.tabBarItem = mapTabBarItem
         
         // Create Tab two
-        var profileTab: UIViewController!
-        if status == false {
-            profileTab = RegistrationViewController()
+        var profileTab: UINavigationController!
+        if isLoggedIn == false {
+            profileTab = UINavigationController(rootViewController: LoginViewController())
         } else {
-            profileTab = LoginViewController()
+            profileTab = UINavigationController(rootViewController: UserProfileVC())
+            LoginViewController().setLoggedInStatus()
         }
         profileTab.title = "Login"
+        profileTab.navigationBar.isHidden = true
         let profileTabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "user-24.png"), selectedImage: UIImage(named: "user-24.png"))
         profileTab.tabBarItem = profileTabBarItem
         

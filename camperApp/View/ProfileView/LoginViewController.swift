@@ -78,22 +78,9 @@ class LoginViewController: UIViewController {
     }
     
     @objc func loginButtonTapped(sender: UIButton) {
-        SVProgressHUD.show()
-        
-        Auth.auth().signIn(withEmail: userName.text!, password: password.text!) { (user, error) in
-            if error != nil {
-                print(error!)
-                self.setFailedStatus()
-                SVProgressHUD.dismiss()
-                self.addFailureAlert()
-            } else {
-                //success
-                print("login successful")
-                self.setLoggedInStatus()
-                self.navigationController?.pushViewController(UserProfileVC(), animated: true)
-                SVProgressHUD.dismiss()
-            }
-        }
+        self.setLoggedInStatus()
+        self.navigationController?.pushViewController(UserProfileVC(), animated: true)
+        TabBarViewController().updateTabs()
     }
     
     func setFailedStatus() {
@@ -102,16 +89,7 @@ class LoginViewController: UIViewController {
     }
     
     func setLoggedInStatus() {
-        guard let currentUser = Auth.auth().currentUser else { return }
-        currentUser.getIDTokenForcingRefresh(true) { idToken, error in
-            if let error = error {
-                print(error)
-                return;
-            }
-            guard let theToken = idToken else { return }
-            self.defaults.set(true, forKey: "isLoggedIn")
-            self.defaults.set(theToken, forKey: "idToken")
-        }
+        self.defaults.set(true, forKey: "isLoggedIn")
     }
     
     @objc func newActTapped(sender: UIButton) {

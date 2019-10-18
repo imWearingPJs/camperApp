@@ -15,7 +15,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     func refreshData() {
         mapView.selectedAnnotations.forEach({ mapView.deselectAnnotation($0, animated: false) })
-        self.loadData()
     }
     
     var locationManager = CLLocationManager()
@@ -26,10 +25,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     override func viewWillAppear(_ animated: Bool) { //hides the tab bar for this map view
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        let isLoggedIn = defaults.bool(forKey: "isLoggedIn")
-        let theToken = defaults.string(forKey: "idToken")
-        print("isLoggedIn: \(isLoggedIn)")
-        print("theToken: \(theToken)")
     }
     
     override func viewWillDisappear(_ animated: Bool) { //shows the nav bar when going to other tabs
@@ -71,7 +66,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func setDelegates() {
         mapView.delegate = self
         locationManager.delegate = self
-//        editVC.delegate = self //this is where the issue occurs
     }
     
     func trackUser() {

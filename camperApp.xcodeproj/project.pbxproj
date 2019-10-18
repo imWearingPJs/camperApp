@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		E18559B922D422F9000EDA85 /* EditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18559B122D422F9000EDA85 /* EditVC.swift */; };
 		E18559BD22D42304000EDA85 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18559BB22D42304000EDA85 /* APIManager.swift */; };
 		E18559C122D4232B000EDA85 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18559C022D4232B000EDA85 /* UIViewController+Extension.swift */; };
+		E1E875972359F85F00515A24 /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E875962359F85F00515A24 /* UserStatus.swift */; };
 		E9BCEBC2F94716EA9071A2A8 /* Pods_camperApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8037C65C1651D4098A657A40 /* Pods_camperApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		E18559B122D422F9000EDA85 /* EditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditVC.swift; sourceTree = "<group>"; };
 		E18559BB22D42304000EDA85 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		E18559C022D4232B000EDA85 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		E1E875962359F85F00515A24 /* UserStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				E18559AA22D422F9000EDA85 /* UserProfileVC.swift */,
 				E18559AC22D422F9000EDA85 /* LoginViewController.swift */,
 				E18559AD22D422F9000EDA85 /* RegistrationViewController.swift */,
+				E1E875962359F85F00515A24 /* UserStatus.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -272,24 +275,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-camperApp/Pods-camperApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Anchorage/Anchorage.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-camperApp/Pods-camperApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Anchorage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-camperApp/Pods-camperApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -313,6 +303,7 @@
 				E18559B822D422F9000EDA85 /* MapViewController.swift in Sources */,
 				E18559B622D422F9000EDA85 /* RegistrationViewController.swift in Sources */,
 				E18559A522D422E2000EDA85 /* CamperDataModel.swift in Sources */,
+				E1E875972359F85F00515A24 /* UserStatus.swift in Sources */,
 				E18559B322D422F9000EDA85 /* UserProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

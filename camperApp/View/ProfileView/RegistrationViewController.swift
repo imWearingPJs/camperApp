@@ -82,20 +82,7 @@ class RegistrationViewController: UIViewController {
     
     @objc func createButtonTapped(sender: UIButton) {
         SVProgressHUD.show()
-        
-        Auth.auth().createUser(withEmail: userName.text!, password: password.text!) {
-            (user, error) in
-            if error != nil {
-                SVProgressHUD.dismiss()
-                print(error!)
-                self.addFailureAlert()
-            } else {
-                //success
-                print("User successfully created in Firebase!!")
-                SVProgressHUD.dismiss()
-                self.navigationController?.pushViewController(UserProfileVC(), animated: true)
-            }
-        }
+        self.navigationController?.pushViewController(UserProfileVC(), animated: true)
     }
     
     func addFailureAlert(){
