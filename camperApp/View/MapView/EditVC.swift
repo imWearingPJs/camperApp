@@ -98,6 +98,7 @@ class EditVC: UIViewController {
         SVProgressHUD.show()
         APIManager().updateData(id: camper?.id, name: nameField.text) { (Bool) in
             self.camper?.name = self.nameField.text
+            self.camper?.title = self.nameField.text
             self.dismiss(animated: true) {
                 self.delegate?.refreshData()
             }
